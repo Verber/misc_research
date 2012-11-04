@@ -1,0 +1,5 @@
+verber_todo_homepage:
+    pattern:  /tasks.{_format}
+    defaults: { _controller: VerberTodoBundle:Default:index, _format: ~ }
+    requirements:
+        _method: GET

@@ -1,0 +1,8 @@
+
+<ul>
+    {% for task in tasks %}
+    <li style="color: #000">
+    {{task.title}} | {{task.status}} : {{task.deadline}}
+    </li>
+    {% endfor %}
+</ul>

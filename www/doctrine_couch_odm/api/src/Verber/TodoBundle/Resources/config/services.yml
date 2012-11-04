@@ -1,0 +1,7 @@
+parameters:
+#    verber_todo.example.class: Verber\TodoBundle\Example
+
+services:
+#    verber_todo.example:
+#        class: %verber_todo.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
