@@ -21,7 +21,7 @@ App.Router = Ember.Router.extend({
         }),
         tasks: Ember.Route.extend({
             route: '/tasks',
-            showTask: Ember.Route.transitionTo('task'),
+            showTask: Ember.Route.transitionTo('root.task'),
             enter: function ( router ){
                 console.log("The tasks sub-state was entered.");
             },
