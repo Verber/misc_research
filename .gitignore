@@ -36,3 +36,6 @@ nbproject
 node_modules
 dist
 vendor
+cache
+log
+logs
