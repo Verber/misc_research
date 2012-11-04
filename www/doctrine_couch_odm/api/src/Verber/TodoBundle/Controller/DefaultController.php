@@ -11,11 +11,16 @@ class DefaultController
     /**
      * @Rest\View(templateVar="tasks")
      */
-    public function indexAction()
+    public function getTasksAction()
     {
         $tasks = array(
             array(
                 'title' => 'Learn&practice with Ember',
+                'status' => "In progress",
+                'deadline' => '2012-11-20'
+            ),
+            array(
+                'title' => 'Learn Symfony 2 REST',
                 'status' => "In progress",
                 'deadline' => '2012-11-20'
             ),

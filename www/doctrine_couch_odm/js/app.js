@@ -16,7 +16,7 @@ App.Router = Ember.Router.extend({
     root: Ember.Route.extend({
         index: Ember.Route.extend({
             route: '/',
-            goToTasks: Ember.Route.transitionTo('root.tasks'),
+            goToTasks: Ember.Route.transitionTo('root.tasks')
             //redirectsTo: '/tasks'
         }),
         tasks: Ember.Route.extend({
@@ -46,17 +46,10 @@ App.Task.reopenClass({
     _listOfTasks: Em.A(),
     all: function() {
         var allTasks = this._listOfTasks;
-        allTasks.clear();
-        allTasks.pushObjects(
-            [
-                { title: 'Learn&practice with Ember',   status: "In progress",
-                    deadline: '2012-11-20'},
-                { title: 'Learn noSQL',   status: "In progress",
-                    deadline: '2012-11-20'},
-                { title: 'Profit!',   status: "Not started",
-                    deadline: '2012-11-20'},
-            ]
-        );
+        $.getJSON('api/web/app.php/tasks.json',function(response){
+            allTasks.clear();
+            allTasks.pushObjects(response);
+        });
         return this._listOfTasks;
     }
 });
