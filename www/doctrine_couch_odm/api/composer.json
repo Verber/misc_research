@@ -19,7 +19,8 @@
         "jms/security-extra-bundle": "1.3.*",
         "jms/di-extra-bundle": "1.2.*",
         "doctrine/couchdb-odm": "dev-master",
-        "doctrine/couchdb-odm-bundle": "dev-master"
+        "doctrine/couchdb-odm-bundle": "dev-master",
+        "friendsofsymfony/rest-bundle": "0.10.x-dev"
     },
     "scripts": {
         "post-install-cmd": [
